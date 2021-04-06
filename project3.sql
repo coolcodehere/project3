@@ -231,9 +231,17 @@ CREATE TABLE magazine (
     magazine_type VARCHAR(20)
 );
 
+INSERT INTO magazine VALUES (1, 2021-03-01, "SCI");
+INSERT INTO magazine VALUES (2, 2021-03-01, "SCI");
+INSERT INTO magazine VALUES (3, 2021-03-01, "SCI");
+
 CREATE TABLE book (
     bidn NUMBER(2) PRIMARY KEY
 );
+
+INSERT INTO book VALUES (1);
+INSERT INTO book VALUES (2);
+INSERT INTO book VALUES (3);
 
 CREATE TABLE journal (
     jidn NUMBER(2) PRIMARY KEY,
@@ -241,18 +249,34 @@ CREATE TABLE journal (
     numbr NUMBER(2)
 );
 
+INSERT INTO journal VALUES (1, 1, 1);
+INSERT INTO journal VALUES (2, 3, 3);
+INSERT INTO journal VALUES (3, 8, 4);
+
 CREATE TABLE conference_preceding (
     cidn NUMBER(2) PRIMARY KEY,
     conference_date DATE,
     location VARCHAR(20)
 );
 
+INSERT INTO conference_preceding VALUES (1, 2021-03-01, "UTAH");
+INSERT INTO conference_preceding VALUES (2, 2021-04-01, "UTAH");
+INSERT INTO conference_preceding VALUES (3, 2021-01-01, "UTAH");
+
 CREATE TABLE edits (
     cidn NUMBER(2) PRIMARY KEY,
     author_name VARCHAR(30)
 );
 
+INSERT INTO edits VALUES (1, "Doug Dougson");
+INSERT INTO edits VALUES (2, "Doug Dogson");
+INSERT INTO edits VALUES (3, "Doug Godson");
+
 CREATE TABLE authors (
     bidn NUMBER(2) PRIMARY KEY,
     author_name VARCHAR(20)
 );
+
+INSERT INTO authors VALUES (1, "Doug Dougson");
+INSERT INTO authors VALUES (2, "Dough Dougson");
+INSERT INTO authors VALUES (3, "Bog Bogson");
